@@ -544,7 +544,7 @@ function postLoading() {
 		});
 
 		//add OpenLayers map controls
-		geoExtMap.map.addControl(new OpenLayers.Control.KeyboardDefaults());
+		geoExtMap.map.addControl(new OpenLayers.Control.KeyboardDefaults({observeElement: geoExtMap.map.div}));
 		geoExtMap.map.addControl(new OpenLayers.Control.Navigation());
 		//to hide miles/feet in the graphical scale bar we need to adapt "olControlScaleLineBottom" in file /OpenLayers/theme/default/style.css: display:none;
 		geoExtMap.map.addControl(new OpenLayers.Control.ScaleLine());
